@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Item Template</title>
+    <!-- Minimal CSS for Magnific Popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <style>
+        /* Basic styling for portfolio item */
+        .portfolio-item {
+            width: 300px;
+            margin: 20px;
+            display: inline-block;
+            position: relative;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Portfolio Section -->
+<div class="portfolio-container">
+    <!-- Each portfolio item simply uses a link with a specific class -->
+    <div class="portfolio-item">
+        <a href="portfolio-item-01.html" class="portfolio-link">
+            <img src="placeholder.jpg" alt="Portfolio Project">
+            <div class="portfolio-overlay">Project Title</div>
+        </a>
+    </div>
+    <!-- You can add more portfolio items here -->
+</div>
+
+<!-- jQuery and Magnific Popup scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // Initialize Magnific Popup for the portfolio links
+        $('.portfolio-link').magnificPopup({
+            type: 'ajax',  // Use 'ajax' if your portfolio pages are HTML fragments,
+                           // or use 'iframe' if they are full HTML documents.
+            midClick: true // Allows opening the lightbox on middle mouse click etc.
+        });
+    });
+</script>
+
+</body>
+</html>
